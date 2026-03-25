@@ -1,2 +1,2 @@
 # The-first-roblox-script
-The test slient am for fling things and people
+The test slient aim for fling things and people and hitboxes. Maybee it is not work
