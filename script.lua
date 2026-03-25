@@ -8,7 +8,7 @@ local RunService = game:GetService("RunService")
 local Camera = workspace.CurrentCamera
 
 local Magnet = Instance.new("Part")
-Magnet.Name = "SolaraMagnet"
+Magnet.Name = "Magnet"
 Magnet.Transparency = 0.8
 Magnet.Color = Color3.fromRGB(255, 0, 0)
 Magnet.CanCollide = false
@@ -37,7 +37,7 @@ local function GetClosestTarget()
                 local dist = (Vector2.new(pos.X, pos.Y) - screenCenter).Magnitude
                 local worldDist = (LP.Character.HumanoidRootPart.Position - hrp.Position).Magnitude
                 
-                if dist < 300 and worldDist < MAX_DISTANCE then -- 300 - радиус наводки
+                if dist < 300 and worldDist < MAX_DISTANCE then -- 300
                     if dist < minDist then
                         target = hrp
                         minDist = dist
@@ -59,4 +59,4 @@ RunService.RenderStepped:Connect(function()
     end
 end)
 
-print("script is loaded")
+print("script is loaded and ready for work")
