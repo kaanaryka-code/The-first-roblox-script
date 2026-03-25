@@ -1,5 +1,6 @@
-local REACH_SIZE = 6 -- Радиус захвата
-local MAX_DISTANCE = 30 -- Дальность в игре
+local REACH_SIZE = 6
+local MAX_DISTANCE = 30
+local Transparency = 0.8
 
 local Players = game:GetService("Players")
 local LP = Players.LocalPlayer
@@ -54,6 +55,8 @@ RunService.RenderStepped:Connect(function()
         Magnet.Size = Vector3.new(REACH_SIZE, REACH_SIZE, REACH_SIZE)
         Magnet.CFrame = target.CFrame
     else
-        Magnet.CFrame = CFrame.new(0, 5000, 0) -- Прячем, если никого нет
+        Magnet.CFrame = CFrame.new(0, 5000, 0)
     end
 end)
+
+print("script is loaded")
